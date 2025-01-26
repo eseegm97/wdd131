@@ -48,10 +48,9 @@ main h2 {
 }
 
 .gallery img {
-    display: flex;
-    justify-content: center;
     width: 200px;
     margin: 0.5rem;
     padding: 0.5rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-left: 425px;
 }
