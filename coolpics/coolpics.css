@@ -48,11 +48,13 @@ main h2 {
 }
 
 .gallery img {
+    display: flex;
+    align-items: center;
     width: 200px;
     margin: 0.5rem;
     padding: 0.5rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    margin-left: 1055px;
+    /* margin-left: 1055px; */
 }
 
 @media screen and (min-width: 700px) {
