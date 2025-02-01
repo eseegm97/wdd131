@@ -57,15 +57,31 @@ main h2 {
 }
 
 img {
-    width: 200px;
+    width: 250px;
     margin: 0.5rem;
     padding: 0.5rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    /* margin-left: 1055px; */
 }
 
 @media screen and (min-width: 700px) {
     .gallery {
-      grid-template-columns: 1fr 1fr;
+        display: grid; /* Switch from flex to grid */
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
     }
-  }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr); /* Four columns */
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center; /* Center the navigation horizontally */
+        gap: 20px;
+    }
+
+    header h2 {
+        display: none; /* Hide "Menu" at larger screen sizes */
+    }
+}
