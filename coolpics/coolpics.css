@@ -68,6 +68,10 @@ img {
         display: grid; /* Switch from flex to grid */
         grid-template-columns: repeat(2, 1fr); /* Two columns */
     }
+
+    .navigation {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1000px) {
