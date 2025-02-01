@@ -25,8 +25,20 @@ header h1 {
     color: white;
 }
 
+header h2 {
+    font-family: var(--primary-font);
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
 .navigation {
-    display: none;
+    font-family: var(--primary-font);
+    font-weight: 100;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    padding: 1rem;
 }
 
 main h2 {
@@ -53,42 +65,35 @@ img {
 
 @media screen and (min-width: 700px) {
     .gallery {
-        display: grid; /* Switch from flex to grid */
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .navigation {
-        display: flex;
-        justify-content: center; /* Center the navigation horizontally */
-        gap: 20px;
-        font-family: var(--primary-font);
-        font-weight: 100;
-        color: white;
-        text-decoration: underline;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .menu-button {
         display: none;
-    }
-
-    header h2 {
-        font-family: var(--primary-font);
-        font-weight: 100;
-        color: white;
-        text-align: center;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .gallery {
-        grid-template-columns: repeat(4, 1fr); /* Four columns */
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .navigation {
         display: flex;
-        justify-content: center; /* Center the navigation horizontally */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header h2 {
+        display: none;
+    }
+}
+
+
+.navigation.show {
+    display: block;
+    justify-content: center;
         gap: 20px;
         font-family: var(--primary-font);
         font-weight: 100;
@@ -96,16 +101,4 @@ img {
         text-decoration: underline;
         text-align: center;
         padding: 1rem;
-    }
-
-    header h2 {
-        display: none; /* Hide "Menu" at larger screen sizes */
-    }
-
-    header h2 {
-        font-family: var(--primary-font);
-        font-weight: 100;
-        color: white;
-        text-align: center;
-    }
 }
