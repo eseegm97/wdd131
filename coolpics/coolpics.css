@@ -5,7 +5,7 @@
     --text-dark: #333;
     --text-light: #ebebeb;
     --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: Mooli, san-serif;
+    --secondary-font: Mooli, sans-serif;
 }
 
 * {
@@ -33,6 +33,19 @@ header h2 {
 }
 
 .navigation {
+    display: none;
+    font-family: var(--primary-font);
+    font-weight: 100;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    padding: 1rem;
+}
+
+.navigation.show {
+    display: block;
+    justify-content: center;
+    gap: 20px;
     font-family: var(--primary-font);
     font-weight: 100;
     color: white;
@@ -63,6 +76,35 @@ img {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.viewer img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+
 @media screen and (min-width: 700px) {
     .gallery {
         display: grid;
@@ -88,17 +130,4 @@ img {
     header h2 {
         display: none;
     }
-}
-
-
-.navigation.show {
-    display: block;
-    justify-content: center;
-        gap: 20px;
-        font-family: var(--primary-font);
-        font-weight: 100;
-        color: white;
-        text-decoration: underline;
-        text-align: center;
-        padding: 1rem;
 }
