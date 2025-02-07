@@ -5,3 +5,48 @@
     --primary-font: "Henny Penny", serif;
     --secondary-font: "Risque", serif;
 }
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 10px;
+    background-color: var(--tertiary-color);
+}
+
+.title h1 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.title h2 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+}
+
+nav {
+    display: grid;
+    justify-content: end;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    list-style: none;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+.navigation li {
+    text-align: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+}
