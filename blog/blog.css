@@ -53,7 +53,7 @@ nav {
 
 .articles-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Three distinct sections */
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     padding: 20px;
     align-items: start;
