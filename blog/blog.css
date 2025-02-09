@@ -50,3 +50,42 @@ nav {
     color: var(--tertiary-color);
     font-size: 1.5rem;
 }
+
+.articles-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Three distinct sections */
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    padding: 15px;
+}
+
+.article-content {
+    text-align: center;
+    padding: 15px;
+}
+
+.article-content h2 {
+    font-family: var(--primary-font);
+}
+
+.article-content img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.filters {
+    padding: 15px;
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+}
