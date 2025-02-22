@@ -11,7 +11,42 @@
 
     </Header>
     <main>
-        
+        <main>
+            <form id="card-payment">
+                <div class="card-container">
+                    <div class="card back">
+                        <div class="cvv-container">
+                            <label for="cvv">CVC/CVV</label>
+                            <input type="text" id="cvv" maxlength="4" placeholder="XXX-X" required>
+                            <p>Last 3 or 4 Digits</p>
+                        </div>
+                    </div>
+                    <div class="card front">
+                        <div class="paying">
+                            <label for="paying">Paying $99</label>
+                        </div>
+                        <div class="card-number">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="16" required>
+                        </div>
+                        <div class="card-details">
+                            <div class="cardholder">
+                                <label for="cardholder">Cardholder Name</label>
+                                <input type="text" id="cardholder" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="expiry">
+                                <label for="expiry">Expiry Date</label>
+                                <div class="expiry-inputs">
+                                    <input type="text" placeholder="MM" maxlength="2" required>
+                                    <input type="text" placeholder="YY" maxlength="2" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submit-button">Submit</button>
+                </div>
+            </form>
+        </main>
     </main>
     <footer>
 
