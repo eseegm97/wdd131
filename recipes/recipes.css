@@ -4,8 +4,8 @@
  --secondary-color: #59c3c3;
  --text-dark: #333;
  --text-light: #ebebeb;
- --primary-font: Arial, Helvetica,sans-serif;
- --secondary-font: "Amatic SC";
+ --primary-font: Arial, Helvetica, sans-serif;
+ --secondary-font: "Amatic SC", sans-serif;
  }
 
  .banner {
@@ -21,6 +21,7 @@
 
  .banner > h1 {
     font-size: 100px;
+    font-family: var(--secondary-font)
  }
 
  .search-form {
@@ -46,10 +47,13 @@
 
  .sweet-potato-waffle-blurb > h3 {
     font-size: 50px;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
  }
 
  .sweet-potato-waffle-blurb > p {
     font-size: 25px;
+    font-family: var(--primary-font);
  }
 
  .social {
