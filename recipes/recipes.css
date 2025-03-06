@@ -74,3 +74,24 @@
     width: 100px;
     margin-right: 50px;
  }
+
+ @media screen and (min-width: 600px) {
+   .sweet-potato-waffle {
+       flex-direction: row; /* Switch from column to row */
+   }
+
+   .banner {
+       flex-direction: row;
+   }
+
+   .search-form {
+       flex-direction: row;
+   }
+}
+
+@media screen and (min-width: 960px) {
+   body {
+       max-width: 960px;
+       margin: 0 auto; /* Center the page */
+   }
+}
