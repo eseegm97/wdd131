@@ -29,4 +29,44 @@
     align-items: center;
  }
 
- 
+ .sweet-potato-waffle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 50px;
+    padding: 25px;
+ }
+
+ .sweet-potato-waffle > img {
+    width: 450px;
+    margin: 100px;
+ }
+
+ .sweet-potato-waffle-blurb > h3 {
+    font-size: 50px;
+ }
+
+ .sweet-potato-waffle-blurb > p {
+    font-size: 25px;
+ }
+
+ .social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
+
+ .flaticon {
+    margin-right: 1555px;
+ }
+
+ .social-links {
+    display: flex;
+ }
+
+ .social-links > a {
+    width: 100px;
+    margin-right: 50px;
+ }
