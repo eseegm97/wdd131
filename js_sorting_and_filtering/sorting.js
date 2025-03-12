@@ -65,4 +65,3 @@ const hikes = [
       trailhead: [43.78555, -111.98996]
     }
   ];
-   const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
