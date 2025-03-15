@@ -30,32 +30,6 @@
     align-items: center;
  }
 
- .sweet-potato-waffle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    margin: 50px;
-    padding: 25px;
- }
-
- .sweet-potato-waffle > img {
-    width: 450px;
-    margin: 100px;
- }
-
- .sweet-potato-waffle-blurb > h3 {
-    font-size: 50px;
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
- }
-
- .sweet-potato-waffle-blurb > p {
-    font-size: 25px;
-    font-family: var(--primary-font);
- }
-
  .social {
     display: flex;
     justify-content: flex-end;
