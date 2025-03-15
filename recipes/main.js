@@ -33,22 +33,6 @@ function ratingTemplate(rating) {
     return html;
 }
 
-// function recipeTemplate(recipe) {
-//     return `<figure class="recipe">
-//         <div class="recipes">
-//             <section class="recipe-item">
-//                 <img src="${recipe.image}" alt="${recipe.name}">
-//                 <section class="recipe-blurb">
-//                     <h3>${recipe.name}</h3>
-//                     ${ratingTemplate(recipe.rating)}
-//                     <p>${recipe.description}</p>
-//                     <div class="tags">${tagsTemplate(recipe.tags)}</div>
-//                 </section>
-//             </section>
-//         </div>
-//     </figure>`;
-// }
-
 function recipeTemplate(recipe) {
     return `<figure class="recipe">
         <img src="${recipe.image}" alt="image of ${recipe.name}" />
