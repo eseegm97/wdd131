@@ -33,21 +33,42 @@ function ratingTemplate(rating) {
     return html;
 }
 
+// function recipeTemplate(recipe) {
+//     return `<figure class="recipe">
+//         <div class="recipes">
+//             <section class="recipe-item">
+//                 <img src="${recipe.image}" alt="${recipe.name}">
+//                 <section class="recipe-blurb">
+//                     <h3>${recipe.name}</h3>
+//                     ${ratingTemplate(recipe.rating)}
+//                     <p>${recipe.description}</p>
+//                     <div class="tags">${tagsTemplate(recipe.tags)}</div>
+//                 </section>
+//             </section>
+//         </div>
+//     </figure>`;
+// }
+
 function recipeTemplate(recipe) {
     return `<figure class="recipe">
-        <div class="recipes">
-            <section class="recipe-item">
-                <img src="${recipe.image}" alt="${recipe.name}">
-                <section class="recipe-blurb">
-                    <h3>${recipe.name}</h3>
+        <img src="${recipe.image}" alt="image of ${recipe.name}" />
+        <figcaption>
+            <ul class="recipe__tags">
+                ${recipe.tags.map(tag => `<li>${tag}</li>`).join('')}
+            </ul>
+            <h2><a href="#">${recipe.name}</a></h2>
+            <p class="recipe__ratings">
+                <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
                     ${ratingTemplate(recipe.rating)}
-                    <p>${recipe.description}</p>
-                    <div class="tags">${tagsTemplate(recipe.tags)}</div>
-                </section>
-            </section>
-        </div>
+                </span>
+            </p>
+            <p class="recipe__description">
+                ${recipe.description}
+            </p>
+        </figcaption>
     </figure>`;
 }
+
 const recipe = getRandomListEntry(recipes);
 console.log(recipeTemplate(recipe));
 
