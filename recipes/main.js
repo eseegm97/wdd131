@@ -70,3 +70,30 @@ function init() {
 }
 
 init();
+
+function filterRecipes(query) {
+    const filtered = recipes.filter(recipe => {
+        return recipe.name.toLowerCase().includes(query) ||
+               recipe.description.toLowerCase().includes(query) ||
+               recipe.tags.some(tag => tag.toLowerCase().includes(query)) ||
+               recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query));
+    });
+
+    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+
+    return sorted;
+}
+
+function searchHandler(e) {
+    e.preventDefault();
+
+    const searchInput = document.getElementById('search-input');
+    const query = searchInput.value.toLowerCase();
+
+    const filteredRecipes = filterRecipes(query);
+
+    renderRecipes(filteredRecipes);
+}
+
+const searchButton = document.getElementById('search-button');
+searchButton.addEventListener('click', searchHandler);
