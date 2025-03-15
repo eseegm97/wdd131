@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
  :root {
  --primary-color: #1B98E0;
  --secondary-color: #59c3c3;
@@ -61,4 +61,70 @@
    .search-form {
        flex-direction: row;
    }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Amatic SC", sans-serif;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner > img {
+    width: 100px;
+}
+
+.banner > h1 {
+    font-size: 100px;
+    font-family: var(--secondary-font)
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flaticon {
+    margin-right: 1555px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links > a {
+    width: 100px;
+    margin-right: 50px;
+}
+
+@media screen and (min-width: 600px) {
+    .sweet-potato-waffle {
+        flex-direction: row;
+    }
+
+    .banner {
+        flex-direction: row;
+    }
+
+    .search-form {
+        flex-direction: row;
+    }
 }
