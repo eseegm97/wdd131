@@ -12,23 +12,61 @@ function getRandomListEntry(list) {
 
 console.log(getRandomListEntry(recipes));
 
+function tagsTemplate(tags) {
+    let html = '';
+    tags.forEach(tag => {
+        html += `<span class="tag">${tag}</span>`;
+    });
+    return html;
+}
+
+function ratingTemplate(rating) {
+    let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+        } else {
+            html += `<span aria-hidden="true" class="icon-star-empty">⭐</span>`;
+        }
+    }
+    html += `</span>`;
+    return html;
+}
+
 function recipeTemplate(recipe) {
-	return `<figure class="recipe">
+    return `<figure class="recipe">
         <div class="recipes">
-            <section class="sweet-potato-waffle">
-                <img src="images/sweet-potato-waffle-md.jpg" alt="Sweet potato waffles">
-                <section class="sweet-potato-waffle-blurb">
-                    <h3>Sweet Potato Waffles</h3>
-                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">☆</span>
-                    </span>
-                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Primis fames ut mus, cubilia torquent aliquam et aliquet. Laoreet fermentum luctus enim eu sapien. Maecenas nascetur integer per inceptos sodales pellentesque dapibus.</p>
+            <section class="recipe-item">
+                <img src="${recipe.image}" alt="${recipe.name}">
+                <section class="recipe-blurb">
+                    <h3>${recipe.name}</h3>
+                    ${ratingTemplate(recipe.rating)}
+                    <p>${recipe.description}</p>
+                    <div class="tags">${tagsTemplate(recipe.tags)}</div>
                 </section>
             </section>
         </div>
     </figure>`;
 }
+const recipe = getRandomListEntry(recipes);
+console.log(recipeTemplate(recipe));
+
+function renderRecipes(recipeList) {
+    const recipesContainer = document.getElementById('recipes-container');
+    
+    recipesContainer.innerHTML = '';
+    
+    recipeList.forEach(recipe => {
+        const recipeHTML = recipeTemplate(recipe);
+        
+        recipesContainer.innerHTML += recipeHTML;
+    });
+}
+
+function init() {
+    const recipe = getRandomListEntry(recipes);
+    
+    renderRecipes([recipe]);
+}
+
+init();
