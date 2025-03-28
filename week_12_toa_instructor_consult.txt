@@ -1,0 +1,9 @@
+Week 12 TOA Instructor Consult:
+
+This evening I met with Brother Currell for 15 minutes to go over my proposal for my end-of-semester project, and talk about its strong points as well as some areas that could use a little more thought and attention.
+
+From our discussion, Brother Currell really liked my idea for an art gallery site of the art of Salvador Dali. He thought my ideas for implementing dynamic web design using JavaScript were very interesting and satisfied the assignment's requirements in that regard.
+
+As far as improvements to my original plan, Brother Currell suggested that I maybe rethink some of my color choices for text and backgrounds. A few of the colors I chose for text did not stand out very well against the background colors and could potentially make my site hard to read. Some additional advice he gave was to make sure that I shoot for a higher lighthouse accessibility score, specifically when it comes to adapting my site to different screen sizes.
+
+Overall, I was very pleased with our discussion and I came away with lots of good advice and things to go forth and implement with my project!
