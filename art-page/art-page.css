@@ -26,5 +26,7 @@
     --nav-hover-link-color: white;
     --nav-hover-background-color: var(--primary-color);
   }
-  
-  /*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+    color: var(--accent1-color);
+}
