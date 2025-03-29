@@ -26,7 +26,3 @@
     --nav-hover-link-color: white;
     --nav-hover-background-color: var(--primary-color);
   }
-
-body {
-    color: var(--accent1-color);
-}
