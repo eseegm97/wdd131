@@ -64,7 +64,7 @@ small {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 25px;
   border: 1px solid black;
   padding: 25px;
   margin: 25px;
@@ -103,4 +103,40 @@ a:hover {
   color: var(--nav-hover-link-color);
   transition: background-color 0.3s ease-in-out;
   transform: scale(1.25);
+}
+
+.main-blurb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 25px;
+}
+
+.welcome h3 {
+  text-align: center;
+}
+
+.welcome img {
+  border: 1px solid black;
+  max-width: 100%;
+}
+
+.intro {
+  max-width: 1000px;
+  background-color: var(--secondary-color);
+  margin: 25px;
+  padding: 25px;
+  border: 1px solid black;
+}
+
+.intro p {
+  font-size: 25px;
 }
