@@ -122,6 +122,7 @@ a:hover {
 .welcome img {
   border: 1px solid black;
   max-width: 100%;
+  margin-top: 10px;
 }
 
 .intro {
@@ -134,6 +135,34 @@ a:hover {
 
 .intro p {
   font-size: 25px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+}
+
+.important-works {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.important-works img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 footer {
