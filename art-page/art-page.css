@@ -144,12 +144,13 @@ a:hover {
   margin-top: 50px;
 }
 
-.important-works {
+.notable-works {
   display: flex;
   animation: scroll 30s linear infinite;
+  will-change: transform;
 }
 
-.important-works img {
+.notable-works img {
   width: 300px;
   height: auto;
   margin-right: 20px;
@@ -167,4 +168,5 @@ a:hover {
 
 footer {
   margin: 25px;
+  text-align: center;
 }
