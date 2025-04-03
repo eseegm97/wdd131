@@ -1,4 +1,8 @@
-const carousel = document.querySelector('.carousel-container');
-const speed = 30;
+const carouselContainer = document.querySelector('.carousel-container');
+const notableWorks = document.querySelector('.notable-works');
 
-carousel.style.animationDuration = `${speed}s`;
+const images = Array.from(notableWorks.children);
+images.forEach(img => {
+    const clone = img.cloneNode(true);
+    notableWorks.appendChild(clone);
+});
