@@ -101,6 +101,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin: 25px;
+  flex-wrap: wrap;
 }
 
 .welcome {
@@ -142,10 +143,10 @@ a:hover {
 
 .notable-works {
   display: flex;
-  animation: scroll 60s linear infinite;
   will-change: transform;
   width: max-content;
-  animation-play-state: running;
+  white-space: nowrap;
+  transition: transform 0s linear;
 }
 
 .notable-works img {
@@ -161,28 +162,16 @@ a:hover {
   filter: grayscale(50%);
 }
 
-.image-caption {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  font-size: 16px;
-  display: none;
+footer {
+  margin: 25px;
+  text-align: center;
 }
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-50%);
+    transform: translateX(-100%);
   }
-}
-
-footer {
-  margin: 25px;
-  text-align: center;
 }
