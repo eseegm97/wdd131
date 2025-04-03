@@ -25,5 +25,34 @@ function scrollCarousel() {
 
 scrollCarousel();
 
-notableWorks.addEventListener('mouseover', () => scrollSpeed = 0);
-notableWorks.addEventListener('mouseout', () => scrollSpeed = 1);
+document.querySelectorAll('.notable-works img').forEach(img => {
+    const caption = document.createElement('div');
+    caption.classList.add('image-caption');
+    caption.textContent = img.alt;
+    img.parentElement.appendChild(caption);
+
+    img.addEventListener('mouseover', () => {
+        scrollSpeed = 0;
+        caption.style.opacity = '1';
+    });
+
+    img.addEventListener('mouseout', () => {
+        scrollSpeed = 1;
+        caption.style.opacity = '0';
+    });
+});
+
+const caption = document.createElement("div");
+caption.classList.add("image-caption");
+document.body.appendChild(caption); 
+
+document.querySelectorAll(".notable-works img").forEach(img => {
+    img.addEventListener("mouseenter", (event) => {
+        caption.textContent = img.alt; 
+        caption.style.opacity = "1"; 
+    });
+
+    img.addEventListener("mouseleave", () => {
+        caption.style.opacity = "0"; 
+    });
+});
