@@ -44,12 +44,6 @@ h3 {
   font-weight: 100;
 }
 
-h4 {
-  font-family: var(--heading-font);
-  color: var(--accent2-color);
-  font-weight: 100;
-}
-
 p {
   font-family: var(--paragraph-font);
   color: var(--accent2-color);
@@ -229,6 +223,22 @@ a:hover {
 .main-gallery img:hover {
   transform: scale(1.05);
   filter: grayscale(20%);
+}
+
+.history {
+  display: block;
+  border: 1px solid black;
+  margin: 25px;
+  background-color: var(--secondary-color);
+}
+
+.history h3 {
+  text-align: center;
+  margin: 25px;
+}
+
+.history p {
+  margin: 25px;
 }
 
 footer {
