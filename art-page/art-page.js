@@ -56,3 +56,34 @@ document.querySelectorAll(".notable-works img").forEach(img => {
         caption.style.opacity = "0"; 
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".main-gallery img");
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const modalTitle = document.getElementById("modal-title");
+    const modalYear = document.getElementById("modal-year");
+    const modalDesc = document.getElementById("modal-description");
+    const closeBtn = document.querySelector(".close-button");
+  
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modalTitle.textContent = img.dataset.title;
+        modalYear.textContent = `Year: ${img.dataset.year}`;
+        modalDesc.textContent = img.dataset.description;
+      });
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
