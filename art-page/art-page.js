@@ -56,31 +56,3 @@ document.querySelectorAll(".notable-works img").forEach(img => {
         caption.style.opacity = "0"; 
     });
 });
-
-const imagesInGallery = document.querySelectorAll('.main-gallery img');
-const modal = document.getElementById('image-modal');
-const modalImage = document.getElementById('modal-image');
-const modalTitle = document.getElementById('modal-title');
-const modalYear = document.getElementById('modal-year');
-const modalDescription = document.getElementById('modal-description');
-const closeButton = document.querySelector('.close-button');
-
-imagesInGallery.forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImage.src = img.src;
-        modalTitle.textContent = img.getAttribute('data-title');
-        modalYear.textContent = img.getAttribute('data-year');
-        modalDescription.textContent = img.getAttribute('data-description');
-    });
-});
-
-closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
