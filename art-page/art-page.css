@@ -232,6 +232,15 @@ a:hover {
   background-color: var(--secondary-color);
 }
 
+.history h2 {
+  text-align: center;
+  margin: 25px;
+  border: 1px solid black;
+  margin-right: 900px;
+  margin-left: 900px;
+  background-color: var(--accent1-color);
+}
+
 .history h3 {
   text-align: center;
   margin: 25px;
@@ -239,6 +248,9 @@ a:hover {
 
 .history p {
   margin: 25px;
+  border: 1px solid black;
+  padding: 25px;
+  background-color: var(--accent1-color)
 }
 
 footer {
