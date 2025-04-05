@@ -56,3 +56,33 @@ document.querySelectorAll(".notable-works img").forEach(img => {
         caption.style.opacity = "0"; 
     });
 });
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const closeBtn = document.getElementById('close-btn');
+const triggers = document.querySelectorAll('.lightbox-trigger');
+
+triggers.forEach(trigger => {
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    const imageUrl = trigger.getAttribute('href');
+    const captionText = trigger.querySelector('img').alt;
+    
+    lightboxImg.src = imageUrl;
+    lightboxCaption.textContent = captionText;
+
+    lightbox.classList.add('show');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.classList.remove('show');
+});
+
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove('show');
+  }
+});
